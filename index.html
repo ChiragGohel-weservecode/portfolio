@@ -1,168 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirag Gohel - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .section {
-            background: white;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-        .skills, .projects, .experience, .education {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill, .project, .job, .degree {
-            background: #e4e4e4;
-            padding: 10px;
-            border-radius: 5px;
-            flex: 1;
-            min-width: 200px;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        @media (max-width: 600px) {
-            .skills, .projects, .experience, .education {
-                flex-direction: column;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Chintan Gohel - Front End Developer</title>
+<style>
+  /* Base styles */
+  * {margin:0; padding:0; box-sizing:border-box;}
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f4f4f4;
+  }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+  }
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+  }
+  header h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+  }
+  .contact-info {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+  .contact-info a {
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+  }
+  .print-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #2575fc;
+    border: 2px solid #fff;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  .print-button:hover {
+    background: #2575fc;
+    color: white;
+  }
+  
+  /* Navigation */
+  nav {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0.5em 1em;
+  }
+  nav ul li a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: background 0.3s, color 0.3s;
+  }
+  nav ul li a:hover {
+    background: #2575fc;
+    color: white;
+  }
+  
+  /* Sections */
+  section {
+    scroll-margin-top: 60px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  section h2 {
+    border-left: 5px solid #2575fc;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    color: #2575fc;
+    font-size: 1.8em;
+  }
+  
+  /* Career Goal */
+  #career-goal ul {
+    list-style: disc inside;
+    margin-left: 20px;
+  }
+  
+  /* Skills */
+  .badges {
+    margin-bottom: 10px;
+  }
+  .badge {
+    display: inline-block;
+    background: #2575fc;
+    color: white;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 15px;
+    font-size: 0.9em;
+  }
+  #skills ul {
+    list-style: disc inside;
+    margin-left: 20px;
+  }
+  
+  /* Work Experience */
+  .job {
+    margin-bottom: 30px;
+  }
+  .job h3 {
+    font-size: 1.3em;
+    color: #333;
+  }
+  .job h4 {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  .job ul {
+    list-style: disc inside;
+    margin-left: 20px;
+  }
+  
+  /* Projects */
+  .project {
+    margin-bottom: 30px;
+  }
+  .project h3 {
+    font-size: 1.2em;
+    color: #333;
+  }
+  .project p {
+    margin: 5px 0;
+  }
+  .project p span {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Education */
+  .education-item {
+    margin-bottom: 15px;
+  }
+  .education-item p {
+    margin: 5px 0;
+  }
+  
+  /* Personal Info */
+  #personal ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  #personal ul li {
+    margin: 5px 0;
+  }
+
+  /* Hover transitions */
+  .job, .project {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .job:hover, .project:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  /* Print */
+  @media print {
+    nav, .print-button {
+      display: none;
+    }
+    body { background: white; }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    header h1 { font-size: 2em; }
+    header h2 { font-size: 1.2em; }
+    nav ul {
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0.3em 0.5em;
+    }
+    .print-button {
+      top: 10px;
+      right: 10px;
+      padding: 6px 10px;
+      font-size: 0.8em;
+    }
+    section {
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Chirag Gohel</h1>
-        <p>Full Stack Developer | Node.js | Angular | React | MySQL</p>
-    </header>
-    
-    <div class="container">
-        <section class="section">
-            <h2>Career Objective</h2>
-            <p>To choose the work I am interested in, which I can perform at my level best, and to deliver my duties sincerely in the interest of the organization.</p>
-        </section>
-        
-        <section class="section">
-            <h2>Technical Skills</h2>
-            <p>Proficient in full-stack web development with expertise in modern front-end and back-end technologies. Strong problem-solving skills and experience in building scalable applications.</p>
-            <div class="skills">
-                <div class="skill">Node.js</div>
-                <div class="skill">Angular</div>
-                <div class="skill">React.js</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">TypeScript</div>
-                <div class="skill">MySQL</div>
-                <div class="skill">MongoDB</div>
-                <div class="skill">Bootstrap</div>
-                <div class="skill">HTML5 & CSS3</div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2>Work Experience</h2>
-            <div class="experience">
-                <div class="job">
-                    <h3>Software Developer - ABC Company (2021 - Present)</h3>
-                    <p>Developing and maintaining web applications using Angular and Node.js. Collaborating with teams to design scalable solutions.</p>
-                </div>
-                <div class="job">
-                    <h3>Frontend Developer - XYZ Solutions (2019 - 2021)</h3>
-                    <p>Worked on creating dynamic UI components using Angular and React, enhancing user experience across multiple applications.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2>Education</h2>
-            <div class="education">
-                <div class="degree">
-                    <h3>Bachelor of Computer Applications (BCA) - University of Rajkot</h3>
-                    <p>Completed with a strong focus on software development, algorithms, and database management.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3>Jewellery-ERP</h3>
-                    <p>A comprehensive enterprise resource planning system developed using Angular, .NET, and SQL for managing inventory and sales.</p>
-                </div>
-                <div class="project">
-                    <h3>IQCheckpoint</h3>
-                    <p>Security management solution integrating Angular, .NET, SQL, and Xero for accounting automation.</p>
-                </div>
-                <div class="project">
-                    <h3>Priiize</h3>
-                    <p>A digital giveaway and reward system built using Angular, Node.js, and PostgreSQL, enhancing user engagement.</p>
-                </div>
-                <div class="project">
-                    <h3>ConcordeTrak</h3>
-                    <p>A tracking application utilizing Angular, .NET, and SQL to streamline operations for logistics management.</p>
-                </div>
-                <div class="project">
-                    <h3>CRM Admin</h3>
-                    <p>CRM platform with Google and Zoo calendar integration, developed using Angular, .NET, and SQL for business automation.</p>
-                </div>
-                <div class="project">
-                    <h3>QBMigrator</h3>
-                    <p>A migration tool designed to integrate with QuickBooks, developed using React.js, .NET, and SQL.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2>Certifications</h2>
-            <p>Certified Angular Developer - ABC Institute</p>
-            <p>Full Stack Web Development - XYZ Academy</p>
-        </section>
-        
-        <section class="section">
-            <h2>Contact</h2>
-            <p>Email: imchintang@gmail.com</p>
-            <p>Phone: +91-9924888158</p>
-            <p>Location: Rajkot, India</p>
-        </section>
+
+<header>
+  <h1>Chintan Gohel</h1>
+  <h2>Front End Developer</h2>
+  <p class="contact-info">
+    <a href="tel:+919924888158">📞 +91 9924888158</a>
+    <a href="mailto:imchintang@gmail.com">✉ imchintang@gmail.com</a>
+  </p>
+  <button class="print-button" onclick="window.print()">Print Resume</button>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#career-goal">Career Goal</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#work-exp">Work Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#personal">Personal Info</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="career-goal">
+    <h2>Career Goal</h2>
+    <ul>
+      <li>To choose the work I am interested in which I can perform at my level best.</li>
+      <li>To deliver my duties very sincerely and regularly in the interest of the organization.</li>
+      <li>Excellent team player and content expert with in-depth knowledge of development tools and languages.</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="badges">
+      <span class="badge">Angular</span>
+      <span class="badge">TypeScript</span>
+      <span class="badge">JavaScript</span>
+      <span class="badge">ReactJS</span>
+      <span class="badge">Bootstrap</span>
+      <span class="badge">HTML5</span>
+      <span class="badge">CSS</span>
+      <span class="badge">NgRx</span>
+      <span class="badge">OAuth</span>
+      <span class="badge">OIDC</span>
+      <span class="badge">GitHub</span>
+      <span class="badge">Jira</span>
     </div>
-    
-    <footer>
-        <p>&copy; 2025 Chirag Gohel. All Rights Reserved.</p>
-    </footer>
+    <ul>
+      <li>6 years of experience as a front-end developer in UI and web applications using Angular, Typescript, Javascript, ReactJS (Beginners), Bootstrap, HTML5, CSS.</li>
+      <li>Make PDCA (Plan-Do-Check-Act) plan as per client requirements and maintain SCRUM framework and Agile methodology for timely delivery.</li>
+      <li>Collaborating closely with the team to support projects during all phases of delivery.</li>
+      <li>Identifying innovative ideas and proof of concepts according to project requirements.</li>
+      <li>Communicating technical issues in an understandable manner to the team and clients.</li>
+      <li>Providing guidance and troubleshooting support to clients.</li>
+      <li>Maintaining an organized workflow using tools like GitHub and Jira.</li>
+      <li>Testing to identify bugs and technical issues before and after deploying.</li>
+      <li>Documenting bug reports, tickets, and any code changes.</li>
+      <li>Proficient in debugging and troubleshooting existing code, code reviews, and refactoring.</li>
+      <li>Used NgRx Store for API calls and internal storage.</li>
+      <li>Integrated Xero accounting software (OAuth Flow, Sync Employee, Timesheet, Payslip, TimeBilling, Contractor Invoice, Leave Balance, etc.).</li>
+      <li>Implemented login using OIDC (OpenID Connect) library with Identity Server.</li>
+    </ul>
+  </section>
+
+  <section id="work-exp">
+    <h2>Work Experience</h2>
+    <div class="job">
+      <h3>Saeculum Solutions Pvt. Ltd. (2020 - Till Date)</h3>
+      <h4>Frontend Developer - Ahmedabad</h4>
+      <ul>
+        <li>Lead the implementation of UI/UX designs into functional, high-performance applications.</li>
+        <li>Develop and maintain reusable components using best practices in frontend development.</li>
+        <li>Work closely with backend developers to integrate RESTful APIs and WebSockets.</li>
+        <li>Write clean, maintainable, and well-documented code following industry standards.</li>
+        <li>Conduct unit testing to ensure application stability.</li>
+        <li>Lead and mentor junior developers, conducting code reviews and sharing best practices.</li>
+        <li>Stay up to date with the latest frontend technologies, frameworks, and trends.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Satva Solutions (2018 - 2020)</h3>
+      <h4>Frontend Developer - Ahmedabad</h4>
+      <ul>
+        <li>Developed responsive and interactive web applications using Angular and React.js.</li>
+        <li>Wrote clean, maintainable, and efficient code.</li>
+        <li>Implemented UI components to enhance user experience.</li>
+        <li>Optimized web applications for performance, scalability, and cross-browser compatibility.</li>
+        <li>Collaborated with backend developers to integrate RESTful API services.</li>
+        <li>Worked with UI/UX designers to transform wireframes and mockups into functional interfaces.</li>
+        <li>Troubleshot, debugged, and resolved frontend issues efficiently.</li>
+        <li>Participated in code reviews, team discussions, and agile development processes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Jewellery-ERP</h3>
+      <p><span>Description:</span> Jewellery-ERP is a jewelry system that provides jewelry manufacturing, inventory management, purchase order and invoice creation, work order, workbag management, tree management, casting to production, and more modules.</p>
+      <p><span>Third Party:</span> ExcelJS (for exporting Excel from frontend), Chart.js</p>
+      <p><span>Technology:</span> Angular 13, .NET, SQL</p>
+    </div>
+    <div class="project">
+      <h3>IQCheckPoint</h3>
+      <p><span>Description:</span> IQCheckPoint application provides a simple workplace solution with business insights, staffing levels, real-time shift attendance, cost-saving management, and more.</p>
+      <p><span>Third Party:</span> Integrated Xero accounting software (OAuth Flow, Sync Employee, Timesheet, Payslip, TimeBilling, Contractor Invoice, Leave Balance, etc.)</p>
+      <p><span>Technology:</span> Angular 8, .NET, SQL</p>
+    </div>
+    <div class="project">
+      <h3>Priiize</h3>
+      <p><span>Description:</span> Priiize provides a template-based system to generate digital scratch games online for businesses. Its interface is clear and straightforward. Also includes webhook integration to streamline workflows.</p>
+      <p><span>Technology:</span> Angular 8, Node.js, PostgreSQL</p>
+    </div>
+    <div class="project">
+      <h3>ConcordeTrak</h3>
+      <p><span>Description:</span> ConcordeTrak is an SF6 Gas Management and Tracking System. It provides handling procedures and inventory control: ConcordeTrak tracks cylinder data and provides customers the ability to manage their SF6 gas and cylinder assets.</p>
+      <p><span>Technology:</span> Angular 8, .NET, SQL</p>
+    </div>
+    <div class="project">
+      <h3>CRM Admin (Multitenant)</h3>
+      <p><span>Description:</span> CRM provides multiple project management tools, forums, and notifications for each project in workstreams. Users can move (drag) cards and lists. Integrated Google and Zoho calendars with two-way event syncing, and implemented 2FA login using Twilio API.</p>
+      <p><span>Third Party:</span> Integrated Google Calendar and Zoho Calendar (two-way sync), Google and Zoho login</p>
+      <p><span>Technology:</span> Angular 6, .NET, SQL</p>
+    </div>
+    <div class="project">
+      <h3>QBMigrator</h3>
+      <p><span>Description:</span> QBMigrator provides QuickBooks to Zoho Books migrations and field mapping, including sync history and data manipulations. Learned new technology (ReactJS) in this project.</p>
+      <p><span>Third Party:</span> QuickBooks and Zoho Books OAuth (for user account mapping)</p>
+      <p><span>Technology:</span> ReactJS 16, .NET, SQL</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-item">
+      <p><strong>MCA</strong>, Department of Computer Science, Government ... (April 2018) - Saurashtra University, Rajkot (72%)</p>
+    </div>
+    <div class="education-item">
+      <p><strong>BCA</strong>, Sarvodaya College of Computer Science (March 2016) - Saurashtra University, Rajkot (76.78%)</p>
+    </div>
+  </section>
+
+  <section id="personal">
+    <h2>Personal Info</h2>
+    <ul>
+      <li><strong>Date of Birth:</strong> 20/09/1994</li>
+      <li><strong>Address:</strong> Ramranuja Soc-1, Opp. Ranuja Temple, Kothariya Main Road, Rajkot-380002</li>
+      <li><strong>Languages:</strong> Gujarati, Hindi, English</li>
+      <li><strong>Hobbies:</strong> Internet surfing, Programming, Travelling</li>
+    </ul>
+  </section>
+</main>
+
 </body>
 </html>
