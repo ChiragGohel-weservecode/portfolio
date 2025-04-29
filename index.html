@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Chirag Gohel - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -12,92 +11,55 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-
         body {
-            background-color: #f4f4f4;
+            background: #f4f4f4;
             color: #333;
             line-height: 1.6;
         }
-
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
         header {
             background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .hero {
-            background: url('hero-bg.jpg') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        section {
-            padding: 40px;
-            text-align: center;
-        }
-
-        ul {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            list-style: none;
-            padding: 10px;
-        }
-
-        .project {
-            background: #fff;
+            color: white;
             padding: 20px;
-            margin: 10px;
-            border-radius: 8px;
+            text-align: center;
+        }
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        form {
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .skills, .projects, .experience, .education {
             display: flex;
-            flex-direction: column;
-            max-width: 400px;
-            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-
-        input, textarea {
+        .skill, .project, .job, .degree {
+            background: #e4e4e4;
             padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
             border-radius: 5px;
+            flex: 1;
+            min-width: 200px;
         }
-
-        button {
-            padding: 10px;
-            background: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
         footer {
+            background: #333;
+            color: white;
             text-align: center;
             padding: 10px;
-            background: #333;
-            color: #fff;
+            margin-top: 20px;
         }
-
-        @media (max-width: 768px) {
-            nav ul {
+        @media (max-width: 600px) {
+            .skills, .projects, .experience, .education {
                 flex-direction: column;
             }
         }
@@ -105,63 +67,102 @@
 </head>
 <body>
     <header>
-        <h1>John Doe</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Chirag Gohel</h1>
+        <p>Full Stack Developer | Node.js | Angular | React | MySQL</p>
     </header>
     
-    <section id="home" class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Software Developer | Web Enthusiast | Problem Solver</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate software developer with expertise in modern web technologies...</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1...</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2...</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
+    <div class="container">
+        <section class="section">
+            <h2>Career Objective</h2>
+            <p>To choose the work I am interested in, which I can perform at my level best, and to deliver my duties sincerely in the interest of the organization.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <p>Proficient in full-stack web development with expertise in modern front-end and back-end technologies. Strong problem-solving skills and experience in building scalable applications.</p>
+            <div class="skills">
+                <div class="skill">Node.js</div>
+                <div class="skill">Angular</div>
+                <div class="skill">React.js</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">TypeScript</div>
+                <div class="skill">MySQL</div>
+                <div class="skill">MongoDB</div>
+                <div class="skill">Bootstrap</div>
+                <div class="skill">HTML5 & CSS3</div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Work Experience</h2>
+            <div class="experience">
+                <div class="job">
+                    <h3>Software Developer - ABC Company (2021 - Present)</h3>
+                    <p>Developing and maintaining web applications using Angular and Node.js. Collaborating with teams to design scalable solutions.</p>
+                </div>
+                <div class="job">
+                    <h3>Frontend Developer - XYZ Solutions (2019 - 2021)</h3>
+                    <p>Worked on creating dynamic UI components using Angular and React, enhancing user experience across multiple applications.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education">
+                <div class="degree">
+                    <h3>Bachelor of Computer Applications (BCA) - University of Rajkot</h3>
+                    <p>Completed with a strong focus on software development, algorithms, and database management.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Jewellery-ERP</h3>
+                    <p>A comprehensive enterprise resource planning system developed using Angular, .NET, and SQL for managing inventory and sales.</p>
+                </div>
+                <div class="project">
+                    <h3>IQCheckpoint</h3>
+                    <p>Security management solution integrating Angular, .NET, SQL, and Xero for accounting automation.</p>
+                </div>
+                <div class="project">
+                    <h3>Priiize</h3>
+                    <p>A digital giveaway and reward system built using Angular, Node.js, and PostgreSQL, enhancing user engagement.</p>
+                </div>
+                <div class="project">
+                    <h3>ConcordeTrak</h3>
+                    <p>A tracking application utilizing Angular, .NET, and SQL to streamline operations for logistics management.</p>
+                </div>
+                <div class="project">
+                    <h3>CRM Admin</h3>
+                    <p>CRM platform with Google and Zoo calendar integration, developed using Angular, .NET, and SQL for business automation.</p>
+                </div>
+                <div class="project">
+                    <h3>QBMigrator</h3>
+                    <p>A migration tool designed to integrate with QuickBooks, developed using React.js, .NET, and SQL.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Certifications</h2>
+            <p>Certified Angular Developer - ABC Institute</p>
+            <p>Full Stack Web Development - XYZ Academy</p>
+        </section>
+        
+        <section class="section">
+            <h2>Contact</h2>
+            <p>Email: imchintang@gmail.com</p>
+            <p>Phone: +91-9924888158</p>
+            <p>Location: Rajkot, India</p>
+        </section>
+    </div>
+    
     <footer>
-        <p>&copy; 2025 John Doe. All rights reserved.</p>
+        <p>&copy; 2025 Chirag Gohel. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
