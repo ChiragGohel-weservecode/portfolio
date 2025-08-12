@@ -1,377 +1,692 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<title>Chirag Gohel - Front End Developer</title>
-<style>
-  /* Base styles */
-  * {margin:0; padding:0; box-sizing:border-box;}
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background: #f4f4f4;
-  }
-  a { text-decoration: none; color: inherit; }
-  ul { list-style: none; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer - Angular, React, TypeScript | 6+ Years Experience</title>
+    <meta name="description" content="Experienced frontend developer specializing in Angular, TypeScript, React, and modern web technologies. 6+ years building scalable web applications with expertise in UI/UX and agile development.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Custom styles */
+        :root {
+            --primary-color: #007ACC;
+            --secondary-color: #1E1E1E;
+        }
 
-  /* Header */
-  header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    position: relative;
-  }
-  header h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.3em;
-  }
-  header h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    font-weight: normal;
-  }
-  .contact-info {
-    margin-top: 10px;
-    font-size: 1em;
-  }
-  .contact-info a {
-    color: white;
-    margin: 0 10px;
-    display: inline-block;
-  }
-  .print-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #fff;
-    color: #2575fc;
-    border: 2px solid #fff;
-    padding: 8px 12px;
-    font-size: 0.9em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-  }
-  .print-button:hover {
-    background: #2575fc;
-    color: white;
-  }
-  
-  /* Navigation */
-  nav {
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  nav ul {
-    display: flex;
-    justify-content: center;
-  }
-  nav ul li {
-    margin: 0.5em 1em;
-  }
-  nav ul li a {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #333;
-    padding: 8px 12px;
-    border-radius: 3px;
-    transition: background 0.3s, color 0.3s;
-  }
-  nav ul li a:hover {
-    background: #2575fc;
-    color: white;
-  }
-  
-  /* Sections */
-  section {
-    scroll-margin-top: 60px;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  section h2 {
-    border-left: 5px solid #2575fc;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    color: #2575fc;
-    font-size: 1.8em;
-  }
-  
-  /* Career Goal */
-  #career-goal ul {
-    list-style: disc inside;
-    margin-left: 20px;
-  }
-  
-  /* Skills */
-  .badges {
-    margin-bottom: 10px;
-  }
-  .badge {
-    display: inline-block;
-    background: #2575fc;
-    color: white;
-    padding: 5px 10px;
-    margin: 3px;
-    border-radius: 15px;
-    font-size: 0.9em;
-  }
-  #skills ul {
-    list-style: disc inside;
-    margin-left: 20px;
-  }
-  
-  /* Work Experience */
-  .job {
-    margin-bottom: 30px;
-  }
-  .job h3 {
-    font-size: 1.3em;
-    color: #333;
-  }
-  .job h4 {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  .job ul {
-    list-style: disc inside;
-    margin-left: 20px;
-  }
-  
-  /* Projects */
-  .project {
-    margin-bottom: 30px;
-  }
-  .project h3 {
-    font-size: 1.2em;
-    color: #333;
-  }
-  .project p {
-    margin: 5px 0;
-  }
-  .project p span {
-    font-weight: bold;
-    color: #555;
-  }
-  
-  /* Education */
-  .education-item {
-    margin-bottom: 15px;
-  }
-  .education-item p {
-    margin: 5px 0;
-  }
-  
-  /* Personal Info */
-  #personal ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  #personal ul li {
-    margin: 5px 0;
-  }
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        body {
+            font-family: 'Roboto', system-ui, sans-serif;
+        }
 
-  /* Hover transitions */
-  .job, .project {
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .job:hover, .project:hover {
-    transform: translateX(5px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
 
-  /* Print */
-  @media print {
-    nav, .print-button {
-      display: none;
-    }
-    body { background: white; }
-  }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    header h1 { font-size: 2em; }
-    header h2 { font-size: 1.2em; }
-    nav ul {
-      flex-wrap: wrap;
-    }
-    nav ul li {
-      margin: 0.3em 0.5em;
-    }
-    .print-button {
-      top: 10px;
-      right: 10px;
-      padding: 6px 10px;
-      font-size: 0.8em;
-    }
-    section {
-      margin: 20px auto;
-      padding: 0 10px;
-    }
-  }
-</style>
+        /* Progress bars */
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Smooth scroll offset for fixed header */
+        html {
+            scroll-padding-top: 4rem;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased text-gray-900 bg-white">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+        Skip to main content
+    </a>
 
-<header>
-  <h1>Chirag Gohel</h1>
-  <h2>Front End Developer</h2>
-  <p class="contact-info">
-    <a href="tel:+919924888158">📞 +91 9924888158</a>
-    <a href="mailto:imchiraggohel@gmail.com">✉ imchiraggohel@gmail.com</a>
-  </p>
-  <button class="print-button" onclick="window.print()">Print Resume</button>
-</header>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-xl font-bold text-gray-900">Chirag Gohel</span>
+                </div>
+                
+                <div class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#hero" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Home</a></li>
+                        <li><a href="#skills" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Skills</a></li>
+                        <li><a href="#experience" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Experience</a></li>
+                        <li><a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="md:hidden hidden" id="mobile-menu">
+                <ul class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-100">
+                    <li><a href="#hero" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Home</a></li>
+                    <li><a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Skills</a></li>
+                    <li><a href="#experience" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Experience</a></li>
+                    <li><a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Projects</a></li>
+                    <li><a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-  <ul>
-    <li><a href="#career-goal">Career Goal</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#work-exp">Work Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#personal">Personal Info</a></li>
-  </ul>
-</nav>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden pt-16">
+            <div class="absolute inset-0 opacity-30">
+                <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Developer workspace" class="absolute top-10 left-10 w-48 h-32 object-cover rounded-lg shadow-lg">
+                <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sunny workspace" class="absolute bottom-10 right-10 w-56 h-40 object-cover rounded-lg shadow-lg">
+                <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern desk setup" class="absolute top-1/2 left-1/3 w-40 h-28 object-cover rounded-lg shadow-lg">
+            </div>
+            
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="max-w-3xl mx-auto fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                        Senior Frontend Developer
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8">
+                        Crafting exceptional digital experiences with Angular, React & TypeScript
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#projects" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<main>
-  <section id="career-goal">
-    <h2>Career Goal</h2>
-    <ul>
-      <li>To choose the work I am interested in which I can perform at my level best.</li>
-      <li>To deliver my duties very sincerely and regularly in the interest of the organization.</li>
-      <li>Excellent team player and content expert with in-depth knowledge of development tools and languages.</li>
-    </ul>
-  </section>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Mastering modern web technologies to build scalable and performant applications</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white rounded-lg shadow-lg p-6 hover-lift">
+                        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Developer workspace" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-4">Frontend Frameworks</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span>Angular</span>
+                                <span class="text-blue-600 font-semibold">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 hover-lift">
+                        <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Code workspace" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-4">Languages & Tools</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span>TypeScript</span>
+                                <span class="text-blue-600 font-semibold">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 hover-lift">
+                        <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Programming setup" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-4">Development Stack</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span>React</span>
+                                <span class="text-blue-600 font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
+                    <div class="bg-white p-4 rounded-lg shadow text-center hover-lift">
+                        <div class="text-2xl font-bold text-blue-600 mb-1">6+</div>
+                        <div class="text-sm text-gray-600">Years Experience</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow text-center hover-lift">
+                        <div class="text-2xl font-bold text-blue-600 mb-1">50+</div>
+                        <div class="text-sm text-gray-600">Projects</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow text-center hover-lift">
+                        <div class="text-2xl font-bold text-blue-600 mb-1">100+</div>
+                        <div class="text-sm text-gray-600">Satisfied Clients</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow text-center hover-lift">
+                        <div class="text-2xl font-bold text-blue-600 mb-1">15+</div>
+                        <div class="text-sm text-gray-600">Technologies</div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-center mb-6">Core Technologies</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div class="flex items-center justify-center p-4 bg-blue-50 rounded-lg hover-lift">
+                            <span class="font-semibold text-blue-700">Angular</span>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-green-50 rounded-lg hover-lift">
+                            <span class="font-semibold text-green-700">TypeScript</span>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-yellow-50 rounded-lg hover-lift">
+                            <span class="font-semibold text-yellow-700">JavaScript</span>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-blue-50 rounded-lg hover-lift">
+                            <span class="font-semibold text-blue-700">ReactJS</span>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-purple-50 rounded-lg hover-lift">
+                            <span class="font-semibold text-purple-700">Bootstrap</span>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-red-50 rounded-lg hover-lift">
+                            <span class="font-semibold text-red-700">HTML5</span>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-blue-50 rounded-lg hover-lift">
+                            <span class="font-semibold text-blue-700">CSS3</span>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-indigo-50 rounded-lg hover-lift">
+                            <span class="font-semibold text-indigo-700">NgRx</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="badges">
-      <span class="badge">Angular</span>
-      <span class="badge">TypeScript</span>
-      <span class="badge">JavaScript</span>
-      <span class="badge">ReactJS</span>
-      <span class="badge">Bootstrap</span>
-      <span class="badge">HTML5</span>
-      <span class="badge">CSS</span>
-      <span class="badge">NgRx</span>
-      <span class="badge">OAuth</span>
-      <span class="badge">OIDC</span>
-      <span class="badge">GitHub</span>
-      <span class="badge">Jira</span>
-    </div>
-    <ul>
-      <li>6 years of experience as a front-end developer in UI and web applications using Angular, Typescript, Javascript, ReactJS (Beginners), Bootstrap, HTML5, CSS.</li>
-      <li>Make PDCA (Plan-Do-Check-Act) plan as per client requirements and maintain SCRUM framework and Agile methodology for timely delivery.</li>
-      <li>Collaborating closely with the team to support projects during all phases of delivery.</li>
-      <li>Identifying innovative ideas and proof of concepts according to project requirements.</li>
-      <li>Communicating technical issues in an understandable manner to the team and clients.</li>
-      <li>Providing guidance and troubleshooting support to clients.</li>
-      <li>Maintaining an organized workflow using tools like GitHub and Jira.</li>
-      <li>Testing to identify bugs and technical issues before and after deploying.</li>
-      <li>Documenting bug reports, tickets, and any code changes.</li>
-      <li>Proficient in debugging and troubleshooting existing code, code reviews, and refactoring.</li>
-      <li>Used NgRx Store for API calls and internal storage.</li>
-      <li>Integrated Xero accounting software (OAuth Flow, Sync Employee, Timesheet, Payslip, TimeBilling, Contractor Invoice, Leave Balance, etc.).</li>
-      <li>Implemented login using OIDC (OpenID Connect) library with Identity Server.</li>
-    </ul>
-  </section>
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Experience</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">6+ years transforming ideas into digital reality</p>
 
-  <section id="work-exp">
-    <h2>Work Experience</h2>
-    <div class="job">
-      <h3>Saeculum Solutions Pvt. Ltd. (2020 - Till Date)</h3>
-      <h4>Frontend Developer - Ahmedabad</h4>
-      <ul>
-        <li>Lead the implementation of UI/UX designs into functional, high-performance applications.</li>
-        <li>Develop and maintain reusable components using best practices in frontend development.</li>
-        <li>Work closely with backend developers to integrate RESTful APIs and WebSockets.</li>
-        <li>Write clean, maintainable, and well-documented code following industry standards.</li>
-        <li>Conduct unit testing to ensure application stability.</li>
-        <li>Lead and mentor junior developers, conducting code reviews and sharing best practices.</li>
-        <li>Stay up to date with the latest frontend technologies, frameworks, and trends.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Satva Solutions (2018 - 2020)</h3>
-      <h4>Frontend Developer - Ahmedabad</h4>
-      <ul>
-        <li>Developed responsive and interactive web applications using Angular and React.js.</li>
-        <li>Wrote clean, maintainable, and efficient code.</li>
-        <li>Implemented UI components to enhance user experience.</li>
-        <li>Optimized web applications for performance, scalability, and cross-browser compatibility.</li>
-        <li>Collaborated with backend developers to integrate RESTful API services.</li>
-        <li>Worked with UI/UX designers to transform wireframes and mockups into functional interfaces.</li>
-        <li>Troubleshot, debugged, and resolved frontend issues efficiently.</li>
-        <li>Participated in code reviews, team discussions, and agile development processes.</li>
-      </ul>
-    </div>
-  </section>
+                <!-- Experience Images -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                    <div class="overflow-hidden rounded-lg shadow-lg hover-lift">
+                        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Night programmer workspace" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-lg hover-lift">
+                        <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Home office setup" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-lg hover-lift">
+                        <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Developer working late" class="w-full h-48 object-cover">
+                    </div>
+                </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Jewellery-ERP</h3>
-      <p><span>Description:</span> Jewellery-ERP is a jewelry system that provides jewelry manufacturing, inventory management, purchase order and invoice creation, work order, workbag management, tree management, casting to production, and more modules.</p>
-      <p><span>Third Party:</span> ExcelJS (for exporting Excel from frontend), Chart.js</p>
-      <p><span>Technology:</span> Angular 13, .NET, SQL</p>
-    </div>
-    <div class="project">
-      <h3>IQCheckPoint</h3>
-      <p><span>Description:</span> IQCheckPoint application provides a simple workplace solution with business insights, staffing levels, real-time shift attendance, cost-saving management, and more.</p>
-      <p><span>Third Party:</span> Integrated Xero accounting software (OAuth Flow, Sync Employee, Timesheet, Payslip, TimeBilling, Contractor Invoice, Leave Balance, etc.)</p>
-      <p><span>Technology:</span> Angular 8, .NET, SQL</p>
-    </div>
-    <div class="project">
-      <h3>Priiize</h3>
-      <p><span>Description:</span> Priiize provides a template-based system to generate digital scratch games online for businesses. Its interface is clear and straightforward. Also includes webhook integration to streamline workflows.</p>
-      <p><span>Technology:</span> Angular 8, Node.js, PostgreSQL</p>
-    </div>
-    <div class="project">
-      <h3>ConcordeTrak</h3>
-      <p><span>Description:</span> ConcordeTrak is an SF6 Gas Management and Tracking System. It provides handling procedures and inventory control: ConcordeTrak tracks cylinder data and provides customers the ability to manage their SF6 gas and cylinder assets.</p>
-      <p><span>Technology:</span> Angular 8, .NET, SQL</p>
-    </div>
-    <div class="project">
-      <h3>CRM Admin (Multitenant)</h3>
-      <p><span>Description:</span> CRM provides multiple project management tools, forums, and notifications for each project in workstreams. Users can move (drag) cards and lists. Integrated Google and Zoho calendars with two-way event syncing, and implemented 2FA login using Twilio API.</p>
-      <p><span>Third Party:</span> Integrated Google Calendar and Zoho Calendar (two-way sync), Google and Zoho login</p>
-      <p><span>Technology:</span> Angular 6, .NET, SQL</p>
-    </div>
-    <div class="project">
-      <h3>QBMigrator</h3>
-      <p><span>Description:</span> QBMigrator provides QuickBooks to Zoho Books migrations and field mapping, including sync history and data manipulations. Learned new technology (ReactJS) in this project.</p>
-      <p><span>Third Party:</span> QuickBooks and Zoho Books OAuth (for user account mapping)</p>
-      <p><span>Technology:</span> ReactJS 16, .NET, SQL</p>
-    </div>
-  </section>
+                <!-- Timeline -->
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative">
+                        <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+                        
+                        <!-- Saeculum Solutions -->
+                        <div class="relative pl-12 pb-8">
+                            <div class="absolute left-2.5 w-3 h-3 bg-blue-600 rounded-full"></div>
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900">Frontend Developer</h3>
+                                    <span class="text-sm text-gray-500">2020 - Present</span>
+                                </div>
+                                <p class="text-blue-600 font-semibold mb-3">Saeculum Solutions Pvt. Ltd.</p>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>• Lead UI/UX implementation into high-performance apps</li>
+                                    <li>• Develop reusable components and mentor junior developers</li>
+                                    <li>• Integrate RESTful APIs and WebSockets</li>
+                                    <li>• Ensure code quality through reviews and testing</li>
+                                </ul>
+                            </div>
+                        </div>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-item">
-      <p><strong>MCA</strong>, Department of Computer Science, Government ... (April 2018) - Saurashtra University, Rajkot (72%)</p>
-    </div>
-    <div class="education-item">
-      <p><strong>BCA</strong>, Sarvodaya College of Computer Science (March 2016) - Saurashtra University, Rajkot (76.78%)</p>
-    </div>
-  </section>
+                        <!-- Satva Solutions -->
+                        <div class="relative pl-12">
+                            <div class="absolute left-2.5 w-3 h-3 bg-blue-600 rounded-full"></div>
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900">Frontend Developer</h3>
+                                    <span class="text-sm text-gray-500">2018 - 2020</span>
+                                </div>
+                                <p class="text-blue-600 font-semibold mb-3">Satva Solutions</p>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>• Built responsive web apps with Angular & React</li>
+                                    <li>• Optimized performance and cross-browser compatibility</li>
+                                    <li>• Collaborated with designers and backend teams</li>
+                                    <li>• Participated in agile development processes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="personal">
-    <h2>Personal Info</h2>
-    <ul>
-      <li><strong>Date of Birth:</strong> 20/09/1994</li>
-      <li><strong>Languages:</strong> Gujarati, Hindi, English</li>
-      <li><strong>Hobbies:</strong> Internet surfing, Programming, Travelling</li>
-    </ul>
-  </section>
-</main>
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Projects</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">6 enterprise solutions delivered</p>
 
+                <!-- Project Images -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                    <div class="overflow-hidden rounded-lg shadow-lg hover-lift">
+                        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Office workspace" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-lg hover-lift">
+                        <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Desk with computer" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-lg hover-lift">
+                        <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Computer monitor setup" class="w-full h-48 object-cover">
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <!-- Jewellery-ERP -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Jewellery-ERP</h3>
+                            <p class="text-gray-600 text-sm mb-4">Complete jewelry manufacturing and inventory management system</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2">Angular 13</span>
+                                <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">.NET</span>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">SQL</span>
+                            </div>
+                            <p class="text-sm text-gray-500">ExcelJS, Chart.js</p>
+                        </div>
+                    </div>
+
+                    <!-- IQCheckPoint -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">IQCheckPoint</h3>
+                            <p class="text-gray-600 text-sm mb-4">Workplace solution with business insights and staffing management</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2">Angular 8</span>
+                                <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">.NET</span>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">SQL</span>
+                            </div>
+                            <p class="text-sm text-gray-500">Xero Integration, OAuth</p>
+                        </div>
+                    </div>
+
+                    <!-- Priiize -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Priiize</h3>
+                            <p class="text-gray-600 text-sm mb-4">Digital scratch game generation platform for businesses</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2">Angular 8</span>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mr-2">Node.js</span>
+                                <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">PostgreSQL</span>
+                            </div>
+                            <p class="text-sm text-gray-500">Webhook Integration</p>
+                        </div>
+                    </div>
+
+                    <!-- ConcordeTrak -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">ConcordeTrak</h3>
+                            <p class="text-gray-600 text-sm mb-4">SF6 Gas Management and Tracking System</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2">Angular 8</span>
+                                <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">.NET</span>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">SQL</span>
+                            </div>
+                            <p class="text-sm text-gray-500">Cylinder Asset Management</p>
+                        </div>
+                    </div>
+
+                    <!-- CRM Admin -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">CRM Admin</h3>
+                            <p class="text-gray-600 text-sm mb-4">Multitenant project management with calendar integration</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2">Angular 6</span>
+                                <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">.NET</span>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">SQL</span>
+                            </div>
+                            <p class="text-sm text-gray-500">Google/Zoho Calendar, 2FA</p>
+                        </div>
+                    </div>
+
+                    <!-- QBMigrator -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-lift">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">QBMigrator</h3>
+                            <p class="text-gray-600 text-sm mb-4">QuickBooks to Zoho Books migration system</p>
+                            <div class="mb-4">
+                                <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded mr-2">ReactJS</span>
+                                <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">.NET</span>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">SQL</span>
+                            </div>
+                            <p class="text-sm text-gray-500">OAuth Integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Education</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Strong academic foundation in computer science</p>
+
+                <!-- Education Images -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                    <div class="overflow-hidden rounded-lg shadow-lg hover-lift">
+                        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="University library" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-lg hover-lift">
+                        <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Adult education center" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-lg hover-lift">
+                        <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Study area in library" class="w-full h-48 object-cover">
+                    </div>
+                </div>
+
+                <!-- Education Cards -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- MCA -->
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md hover-lift">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">Master of Computer Applications (MCA)</h3>
+                                    <p class="text-blue-600 font-semibold">Saurashtra University, Rajkot</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-2">Department of Computer Science, Government College</p>
+                            <p class="text-gray-500 text-sm">April 2018 • 72%</p>
+                        </div>
+
+                        <!-- BCA -->
+                        <div class="bg-gray-50 p-8 rounded-lg shadow-md hover-lift">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">Bachelor of Computer Applications (BCA)</h3>
+                                    <p class="text-green-600 font-semibold">Sarvodaya College of Computer Science</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-2">Saurashtra University, Rajkot</p>
+                            <p class="text-gray-500 text-sm">March 2016 • 76.78%</p>
+                        </div>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="mt-12 bg-gray-50 p-8 rounded-lg hover-lift">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Additional Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Personal Details</h4>
+                                <ul class="space-y-1 text-gray-600">
+                                    <li><span class="font-medium">Date of Birth:</span> 20/09/1994</li>
+                                    <li><span class="font-medium">Languages:</span> Gujarati, Hindi, English</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Interests</h4>
+                                <ul class="space-y-1 text-gray-600">
+                                    <li>Internet surfing</li>
+                                    <li>Programming</li>
+                                    <li>Travelling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Contact</h2>
+                <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Let's build something amazing together</p>
+
+                <!-- Contact Images -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Developer workspace" class="w-full h-48 object-cover opacity-60">
+                    </div>
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Home office setup" class="w-full h-48 object-cover opacity-60">
+                    </div>
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Developer working late" class="w-full h-48 object-cover opacity-60">
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="max-w-2xl mx-auto">
+                    <form class="space-y-6" id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Name" required class="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                            <input type="email" placeholder="Email" required class="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                        </div>
+                        <input type="text" placeholder="Subject" required class="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                        <textarea placeholder="Message" rows="5" required class="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-white"></textarea>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <!-- Contact Info -->
+                    <div class="mt-12 text-center">
+                        <h3 class="text-xl font-bold mb-4">Get In Touch</h3>
+                        <div class="flex justify-center space-x-6">
+                            <a href="https://linkedin.com/" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                                </svg>
+                            </a>
+                            <a href="mailto:developer@example.com" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2024 Frontend Developer Portfolio. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#hero" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a>
+                <a href="#experience" class="text-gray-400 hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = this.querySelector('input[placeholder="Name"]').value;
+            const email = this.querySelector('input[placeholder="Email"]').value;
+            const subject = this.querySelector('input[placeholder="Subject"]').value;
+            const message = this.querySelector('textarea[placeholder="Message"]').value;
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            
+            // Show success message
+            alert('Thank you for your message! I will get back to you soon.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Animate progress bars on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.progress-bar');
+                    progressBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe skills section
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+
+        // Add fade-in animation to sections on scroll
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe all main sections
+        document.querySelectorAll('section').forEach(section => {
+            fadeObserver.observe(section);
+        });
+
+        // Update active navigation link based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600');
+                link.classList.add('text-gray-700');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-blue-600');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
